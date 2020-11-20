@@ -43,7 +43,8 @@ a {
   padding-left: 15px;
   padding-right: 15px;
 
-  border: 2px solid tomato;
+  background-color: wheat;
+  /* border: 2px solid tomato; */
 }
 
 .section {
@@ -57,6 +58,11 @@ a {
 
 /* Логотип */
 .logo {
+  display: block;
+
+  padding-top: 24px;
+  padding-bottom: 24px;
+
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -104,11 +110,31 @@ a {
 }
 
 /* Заголовок страницы с меню навигации */
+.main-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .site-nav {
+  display: flex;
+  margin-right: auto;
+}
+
+.site-nav .logo {
+  margin-right: 93px;
+}
+
+.site-links {
   display: flex;
 }
 
-.site-nav .link {
+.site-links .link {
+  display: block;
+
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--primary-text-color);
   
   font-weight: 500;
@@ -116,27 +142,42 @@ a {
   letter-spacing: 0.02em;
 }
 
-.site-nav .item {
+.site-links .item:not(:last-child) {
   margin-right: 50px;
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus,
-.site-nav .link.current,
+.site-links .link:hover,
+.site-links .link:focus,
+.site-links .link.current,
 .contacts-top a:hover,
 .contacts-top a:focus {
   color: var(--accent-color);
 }
 
-.site-nav .link.current:hover,
-.site-nav .link.current:focus {
+.site-links .link.current:hover,
+.site-links .link.current:focus {
 	color: var(--primary-text-color);
 }
-.contacts-top a {
+
+.contacts-top {
+  display: flex;
+}
+
+.contacts-top .link {
+  display: block;
+
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--secondary-text-color);
+
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+
+.contacts-top .item:not(:last-child) {
+  margin-right: 50px;
 }
 
 /* Заставка */
@@ -246,12 +287,15 @@ a {
 	color: var(--accent-color-trasparent);
 }
 
-/* Набор контента */
-.content h2 {
-  color: var(--primary-text-color);
-}
-.content p {
-  color: var(--secondary-text-color);
+/* Портфолио */
+.portfolio h1 {
+  color: var(--main-black-color);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 /* Селектор контента */
@@ -265,23 +309,31 @@ a {
   background-color: var(--accent-color);
 }
 
-/* Портфолио */
-.portfolio h1 {
-  color: var(--main-black-color);
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  text-align: center;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+/* Выполненные проекты */
+.projects.list {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
 }
-.content.list h2 {
+
+.projects.list .project {
+  width: 370px;
+  margin-right: 30px;
+}
+
+.projects.list .project:nth-child(3n) {
+  margin-right: 0px;
+}
+
+.projects.list h2 {
+  color: var(--primary-text-color);
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
-.content.list p {
+
+.projects.list p {
   color: var(--secondary-text-color);
   font-size: 16px;
   line-height: 2;
