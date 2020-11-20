@@ -8,7 +8,10 @@
   <link rel="icon" href="./images/webstudio-favicon-192x192.png" sizes="192x192">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet"> 
-  <link rel="stylesheet" href="./css/normalize.css">
+  <!-- <link rel="stylesheet" href="./css/normalize.css"> -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+  />
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 
@@ -16,29 +19,29 @@
 
   <!-- Заголовок страницы с меню навигации -->
   <header>
+    <div class="container">
+      <nav>
+        <!-- Логотип в виде SVG
+        <a href="/">
+          <img src="./images/webstudio-logo.svg" alt="Логотип WebStudio" width="145">
+        </a> -->
+        <!-- Логотип в виде текста -->
+        <a class="logo" href="./index.html">
+          <span class="web-on-light">Web</span><span class="studio-on-light">Studio</span>
+        </a>
 
-    <nav>
-      <!-- Логотип в виде SVG
-      <a href="/">
-        <img src="./images/webstudio-logo.svg" alt="Логотип WebStudio" width="145">
-      </a> -->
-      <!-- Логотип в виде текста -->
-      <a class="logo" href="./index.html">
-        <span class="web-on-light">Web</span><span class="studio-on-light">Studio</span>
-      </a>
+        <ul class="site-nav list">
+          <li class="item"><a class="link" href="./index.html">Студия</a></li>
+          <li class="item"><a class="link current" href="./portfolio.html">Портфолио</a></li>
+          <li class="item"><a class="link" href="">Контакты</a></li>
+        </ul>
+      </nav>
 
-      <ul class="site-nav list">
-        <li><a class="link" href="./index.html">Студия</a></li>
-        <li><a class="link current" href="./portfolio.html">Портфолио</a></li>
-        <li><a class="link" href="">Контакты</a></li>
+      <ul class="contacts-top list">
+        <li><a href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+        <li><a href="tel:+380961111111">+38 096 111 11 11</a></li>
       </ul>
-    </nav>
-
-    <ul class="contacts-top list">
-      <li><a href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-      <li><a href="tel:+380961111111">+38 096 111 11 11</a></li>
-    </ul>
-
+    </div>
   </header>
 
   <!-- Основное тело страницы -->
@@ -46,90 +49,92 @@
 
     <!-- Портфолио -->
     <section class="portfolio">
-      <h1>Наши работы</h1>
-      <!-- Селектор контента -->
-      <ul class="content-selector list">
-        <li><button type="button">Всё</button></li>
-        <li><button type="button">Веб-сайты</button></li>
-        <li><button type="button">Приложения</button></li>
-        <li><button type="button">Дизайн</button></li>
-        <li><button type="button">Маркетинг</button></li>
-      </ul>
+      <div class="container">
+        <h1>Наши работы</h1>
+        <!-- Селектор контента -->
+        <ul class="content-selector list">
+          <li><button type="button">Всё</button></li>
+          <li><button type="button">Веб-сайты</button></li>
+          <li><button type="button">Приложения</button></li>
+          <li><button type="button">Дизайн</button></li>
+          <li><button type="button">Маркетинг</button></li>
+        </ul>
 
-      <!-- Набор контента -->
-      <ul class="content list">
-        <li>
-          <a href="">
-            <img src="./images/technocrak.jpg" alt="Технокряк. Веб-сайт" width="370">
-            <h2>Технокряк</h2>
-            <p>Веб-сайт</p>
-          </a>
-        </li>
+        <!-- Набор контента -->
+        <ul class="content list">
+          <li>
+            <a href="">
+              <img src="./images/technocrak.jpg" alt="Технокряк. Веб-сайт" width="370">
+              <h2>Технокряк</h2>
+              <p>Веб-сайт</p>
+            </a>
+          </li>
 
-        <li>
-          <a href="">
-            <img src="./images/poster-no-vs-gs.jpg" alt="Постер New Orlean vs Golden Star. Дизайн" width="370">
-            <h2>Постер New Orlean vs Golden Star</h2>
-            <p>Дизайн</p>
-          </a>
-        </li>
+          <li>
+            <a href="">
+              <img src="./images/poster-no-vs-gs.jpg" alt="Постер New Orlean vs Golden Star. Дизайн" width="370">
+              <h2>Постер New Orlean vs Golden Star</h2>
+              <p>Дизайн</p>
+            </a>
+          </li>
 
-        <li>
-          <a href="">
-            <img src="./images/restaurant-seafood.jpg" alt="Ресторан Seafood. Приложение" width="370">
-            <h2>Ресторан Seafood</h2>
-            <p>Приложение</p>
-          </a>
-        </li>
+          <li>
+            <a href="">
+              <img src="./images/restaurant-seafood.jpg" alt="Ресторан Seafood. Приложение" width="370">
+              <h2>Ресторан Seafood</h2>
+              <p>Приложение</p>
+            </a>
+          </li>
 
-        <li>
-          <a href="">
-            <img src="./images/project-prime.jpg" alt="Проект Prime. Маркетинг" width="370">
-            <h2>Проект Prime</h2>
-            <p>Маркетинг</p>
-          </a>
-        </li>
+          <li>
+            <a href="">
+              <img src="./images/project-prime.jpg" alt="Проект Prime. Маркетинг" width="370">
+              <h2>Проект Prime</h2>
+              <p>Маркетинг</p>
+            </a>
+          </li>
 
-        <li>
-          <a href="">
-            <img src="./images/project-boxes.jpg" alt="Проект Boxes. Приложение" width="370">
-            <h2>Проект Boxes</h2>
-            <p>Приложение</p>
-          </a>
-        </li>
+          <li>
+            <a href="">
+              <img src="./images/project-boxes.jpg" alt="Проект Boxes. Приложение" width="370">
+              <h2>Проект Boxes</h2>
+              <p>Приложение</p>
+            </a>
+          </li>
 
-        <li>
-          <a href="">
-            <img src="./images/inspiration-web-site.jpg" alt="Inspiration has no Borders. Веб-сайт" width="370">
-            <h2>Inspiration has no Borders</h2>
-            <p>Веб-сайт</p>
-          </a>
-        </li>
+          <li>
+            <a href="">
+              <img src="./images/inspiration-web-site.jpg" alt="Inspiration has no Borders. Веб-сайт" width="370">
+              <h2>Inspiration has no Borders</h2>
+              <p>Веб-сайт</p>
+            </a>
+          </li>
 
-        <li>
-          <a href="">
-            <img src="./images/limited-edition.jpg" alt="Издание Limited Edition. Дизайн" width="370">
-            <h2>Издание Limited Edition</h2>
-            <p>Дизайн</p>
-          </a>
-        </li>
+          <li>
+            <a href="">
+              <img src="./images/limited-edition.jpg" alt="Издание Limited Edition. Дизайн" width="370">
+              <h2>Издание Limited Edition</h2>
+              <p>Дизайн</p>
+            </a>
+          </li>
 
-        <li>
-          <a href="">
-            <img src="./images/project-lab.jpg" alt="Проект LAB. Маркетинг" width="370">
-            <h2>Проект LAB</h2>
-            <p>Маркетинг</p>
-          </a>
-        </li>
+          <li>
+            <a href="">
+              <img src="./images/project-lab.jpg" alt="Проект LAB. Маркетинг" width="370">
+              <h2>Проект LAB</h2>
+              <p>Маркетинг</p>
+            </a>
+          </li>
 
-        <li>
-          <a href="">
-            <img src="./images/growing-business.jpg" alt="Growing Business. Приложение" width="370">
-            <h2>Growing Business</h2>
-            <p>Приложение</p>
-          </a>
-        </li>
-      </ul>
+          <li>
+            <a href="">
+              <img src="./images/growing-business.jpg" alt="Growing Business. Приложение" width="370">
+              <h2>Growing Business</h2>
+              <p>Приложение</p>
+            </a>
+          </li>
+        </ul>
+      </div>
     </section>
 
   </main>
