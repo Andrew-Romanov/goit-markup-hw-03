@@ -59,7 +59,7 @@ h1, h2, h3, p {
 }
 
 /* Прячем заголовки */
-/* .hidden {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -68,7 +68,7 @@ h1, h2, h3, p {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
-} */
+}
 
 /* Логотип */
 .logo {
@@ -120,12 +120,14 @@ h1, h2, h3, p {
 }
 
 /* Заголовок страницы с меню навигации */
+header {
+  border-bottom: 1px solid var(--main-nav-stroke-color);
+}
+
 .main-nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-
-  border-bottom: 1px solid var(--main-nav-stroke-color);
 }
 
 .site-nav {
@@ -352,6 +354,10 @@ h1, h2, h3, p {
   font-style: normal;
 }
 
+.contacts-bottom li {
+  margin-top: 9px;
+}
+
 .contacts-bottom a {
   color: var(--bottom-contacts-text-color);
 }
@@ -440,6 +446,7 @@ h1, h2, h3, p {
   border-right: 1px solid var(--portfolio-stroke-color);
   border-bottom: 1px solid var(--portfolio-stroke-color);
   border-left: 1px solid var(--portfolio-stroke-color);
+  padding: 20px 24px;
 }
 
 .project-content h2 {
@@ -448,15 +455,11 @@ h1, h2, h3, p {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  padding-top: 20px;
-  padding-bottom: 4px;
-  padding-left: 24px;
+  margin-bottom: 4px;
 }
 
 .project-content p {
   color: var(--secondary-text-color);
   font-size: 16px;
   line-height: 2;
-  padding-bottom: 20px;
-  padding-left: 24px;
 }
